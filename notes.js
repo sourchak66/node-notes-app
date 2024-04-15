@@ -28,15 +28,13 @@ const removeNotes = (titleVal) =>
     if (notes.length > notesToKeep.length)
     {
         saveNotes(notesToKeep);
-        console.log
-        (
+        console.log(
             chalk.red.inverse("Removing The Note : " + titleVal)
         );
     }
     else
     {
-        console.log
-        (
+        console.log(
             chalk.green.inverse("No Note Found!")
         );
     }
@@ -71,15 +69,13 @@ const addNotes = (titleVal, bodyVal) =>
 
         saveNotes(notes);
 
-        console.log
-        (
+        console.log(
             chalk.green.inverse("New Note Added : " + titleVal)
         );
     }
     else
     {
-        console.log
-        (
+        console.log(
             chalk.red.inverse("Note Title Taken!")
         );
     }
@@ -97,19 +93,16 @@ const readNotes = (titleVal) =>
 
     if (noteInfo !== undefined)
     {
-        console.log
-        (
+        console.log(
             "Title : " + chalk.green.bold(noteInfo.title)
         );
-        console.log
-        (
+        console.log(
             "Body : " + chalk.green.bold(noteInfo.body)
         );
     }
     else
     {
-        console.log
-        (
+        console.log(
             chalk.red.inverse("Note Not Found!")
         );
     }
@@ -122,20 +115,17 @@ const listNotes = () =>
 
     if (notes.length > 0)
     {
-        console.log
-        (
+        console.log(
             chalk.green.inverse("Your Notes!")
         );
 
         // notes.forEach(function(eachNote)
         notes.forEach((eachNote) =>
         {
-            console.log
-            (
+            console.log(
                 "Title : " + chalk.green.bold(eachNote.title)
             );
-            console.log
-            (
+            console.log(
                 "Body : " + chalk.green.bold(eachNote.body)
             );
         });
